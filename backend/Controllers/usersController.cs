@@ -116,7 +116,6 @@ namespace backend.Controllers
             return db.users.Count(e => e.id == id) > 0;
         }
 
-        [EnableCors(origins: "*", headers: "*", methods: "*", exposedHeaders: "X-Custom-Header")]
         [Route("api/users/login")]
         public IHttpActionResult PostLogin(users users)
         {
